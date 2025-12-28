@@ -34,7 +34,7 @@ Ensure you have Python installed and an **OpenAI API Key**.
 ### 2. Installation
 Clone this repository and install the required dependencies:
 ```bash
-pip install streamlit langchain langchain-openai langchain-community faiss-cpu pypdf python-dotenv
+pip install -r requirements.txt
 ```
 ### 3. Environment Setup
 Create a `.env` file in the root directory and add your OpenAI API key:
