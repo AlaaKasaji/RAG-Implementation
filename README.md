@@ -27,3 +27,19 @@ Ensure you have Python installed and an **OpenAI API Key**.
 Clone this repository and install the required dependencies:
 ```bash
 pip install streamlit langchain langchain-openai langchain-community faiss-cpu pypdf python-dotenv
+```
+### 3. Environment Setup
+Create a `.env` file in the root directory and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=your_api_key_here
+```
+### 4. Running the App
+Launch the application using Streamlit:
+```bash
+streamlit run app.py
+```
+## 📖 How to Use
+1. Navigate to the 📚 **Study Knowledge** sidebar.
+2. Upload your study materials (PDF format).
+3. Click "**Index Documents**" to begin the analysis.
+4. Once you see "Ready to study!", use the chat interface to ask questions or request a quiz.
