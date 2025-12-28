@@ -11,6 +11,14 @@
 * **Smart Study Assistant 🧠**: Powered by `gpt-4o-mini`, the assistant provides concise answers and can even generate **MCQ-style quizzes** from your material.
 * **Context Preservation 🧩**: Implements `RecursiveCharacterTextSplitter` to ensure text chunks maintain meaningful context during the embedding process.
 
+### 🏗️ Application Architecture
+![System Architecture](assets/architecture_diagram.png)
+The **Study Partner** architecture consists of three main pipelines working together:
+
+1.  **Data Ingestion (Left Flow)**: When a user uploads PDFs via the Streamlit sidebar, the application splits the text into manageable chunks and converts them into vector embeddings using OpenAI. These are stored locally in a FAISS vector database.
+2.  **User Interaction (Center)**: The Streamlit UI handles state management, displaying chat history, and capturing user input.
+3.  **RAG Inference (Right Flow)**: Upon receiving a question, the system searches the FAISS database for relevant content. This context is combined with a specific system prompt and sent to the `gpt-4o-mini` model to generate an accurate, context-aware response.
+
 ## 🛠️ Tech Stack
 * **Frontend**: [Streamlit](https://streamlit.io/)
 * **LLM Framework**: [LangChain](https://www.langchain.com/)
